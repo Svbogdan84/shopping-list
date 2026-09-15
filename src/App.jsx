@@ -4,7 +4,7 @@ import { Plus, Trash2, Edit2, Check, X } from 'lucide-react';
 export default function App() {
   const [lists, setLists] = useState(() => {
     const saved = localStorage.getItem('shopping_lists');
-    return saved ? JSON.parse(saved) : [{ id: '1', name: 'Mercadona Store', items: [] }];
+    return saved ? JSON.parse(saved) : [{ id: '1', name: 'Mercadona', items: [] }];
   });
   const [activeListId, setActiveListId] = useState(lists[0]?.id || '');
   const [newItemText, setNewItemText] = useState('');
